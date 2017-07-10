@@ -1,0 +1,9 @@
+".source.oberon":
+    editor:
+        autoIndentOnPaste: false
+        softTabs: true
+        tabLength: 4
+        commentStart: "(* "
+        commentEnd: " *)"
+        increaseIndentPattern: "^.*\\b(BEGIN|DO|ELSE|ELSIF|LOOP|OF|REPEAT|THEN|UNTIL)\\b.*$"
+        decreaseIndentPattern: "^\\s*(END|ELSE|ELSIF|UNTIL)\\b.*"
