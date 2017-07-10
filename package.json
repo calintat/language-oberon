@@ -1,0 +1,14 @@
+{
+  "name": "language-oberon",
+  "version": "0.0.0",
+  "description": "Oberon language support in Atom",
+  "keywords": [
+    "oberon"
+  ],
+  "repository": "https://github.com/calintat/language-oberon",
+  "license": "MIT",
+  "engines": {
+    "atom": ">=1.0.0 <2.0.0"
+  },
+  "dependencies": {}
+}

@@ -1,0 +1,90 @@
+scopeName: "source.oberon"
+name: "Oberon"
+fileTypes: ["m"]
+firstLineMatch: "MODULE\\s+\\w+;"
+
+patterns: [
+    {
+        begin: "\\(\\*"
+        end: "\\*\\)"
+        name: "comment.oberon"
+    }
+    {
+        match: "\\.|,|;"
+        name: "punctuation.oberon"
+    }
+    {
+        match: "\\b([0-9]+\\.[0-9]*((E|D)[+-]?[0-9]+)?)\\b"
+        name: "constant.numeric.real.oberon"
+    }
+    {
+        match: "\\b([0-9]+|[0-9][0-9A-F]*H)\\b"
+        name: "constant.numeric.integer.oberon"
+    }
+    {
+        match: "\\b([0-9][0-9A-F]*X)\\b"
+        name: "constant.character.oberon"
+    }
+    {
+        match: "\\b(NIL|TRUE|FALSE)\\b"
+        name: "constant.language.oberon"
+    }
+    {
+        match: "\\b(BY|DO|FOR|LOOP|REPEAT|TO|UNTIL|WHILE)\\b"
+        name: "keyword.control.repeat.oberon"
+    }
+    {
+        match: "\\b(BEGIN|END|EXIT|IMPORT|RETURN|WITH)\\b"
+        name: "keyword.control.statement.oberon"
+    }
+    {
+        match: "\\b(CASE|ELSE|ELSIF|IF|THEN)\\b"
+        name: "keyword.control.conditional.oberon"
+    }
+    {
+        match: "&|\\~|\\b(OR)\\b"
+        name: "keyword.operator.logic.oberon"
+    }
+    {
+        match: "\\.\\."
+        name: "keyword.operator.range.oberon"
+    }
+    {
+        match: "\\b(IN|IS)\\b"
+        name: "keyword.operator.other.oberon"
+    }
+    {
+        match: "\\+|-|\\*|/|\\^|\\b(DIV|MOD)\\b"
+        name: "keyword.operator.arithmetic.oberon"
+    }
+    {
+        match: ":="
+        name: "keyword.operator.assignment.oberon"
+    }
+    {
+        match: "=|#|<|>|<=|>="
+        name: "keyword.operator.comparison.oberon"
+    }
+    {
+        match: "\\b(ARRAY|CONST|MODULE|OF|POINTER|PROCEDURE|RECORD|VAR|TYPE)\\b"
+        name: "storage.modifier.oberon"
+    }
+    {
+        match: "\\b(BOOLEAN|CHAR|SHORTINT|INTEGER|LONGINT|REAL|LONGREAL|SET)\\b"
+        name: "storage.type.buildin.oberon"
+    }
+    {
+        begin: "\'"
+        beginCaptures: 0: name: "punctuation.definition.string.begin.oberon"
+        end: "\'"
+        endCaptures: 0: name: "punctuation.definition.string.end.oberon"
+        name: "string.quoted.double.oberon"
+    }
+    {
+        begin: "\""
+        beginCaptures: 0: name: "punctuation.definition.string.begin.oberon"
+        end: "\""
+        endCaptures: 0: name: "punctuation.definition.string.end.oberon"
+        name: "string.quoted.single.oberon"
+    }
+]
